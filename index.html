@@ -610,6 +610,301 @@
     </div>
   </div>
 </footer>
+  <!-- ════════════════════════════════════════════════════════════════
+     STRATEGIC VALUE FOR ORGANIZATIONS — 7-Tab Interactive Section
+     Paste this entire block right before the closing </body> tag.
+     (Self-contained: includes its own <style> and <script>, scoped
+     with the "fi-" prefix so it won't clash with your existing CSS.)
+     ════════════════════════════════════════════════════════════════ -->
 
+<style>
+  /* Optional: increase the base font size across the WHOLE site.
+     Most of your existing sizes use rem units, so raising the root
+     font-size scales everything proportionally without breaking layout.
+     Add this single line inside your main <style> block in <head>
+     (or just leave it here — it will still apply globally): */
+  html { font-size: 18px; }
+
+  #fi-section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 4rem 2rem 5rem;
+  }
+  #fi-section .section-title { margin-bottom: 1rem; }
+  .fi-intro {
+    font-size: 0.92rem;
+    color: #908070;
+    max-width: 760px;
+    margin-bottom: 2.2rem;
+    line-height: 1.8;
+  }
+  .fi-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #2a2a2a;
+    padding-bottom: 1.2rem;
+  }
+  .fi-tab-btn {
+    padding: 0.5rem 1.1rem;
+    font-size: 0.8rem;
+    letter-spacing: 0.04em;
+    border-radius: 3px;
+    border: 1px solid #3a3020;
+    color: #a09070;
+    background: transparent;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.15s ease;
+  }
+  .fi-tab-btn:hover { background: #c9a96e22; color: #c9a96e; }
+  .fi-tab-btn.fi-active { background: #c9a96e; color: #0f0f0f; border-color: #c9a96e; }
+
+  .fi-panel { display: none; animation: fiFadeIn 0.25s ease; }
+  .fi-panel.fi-active { display: block; }
+  @keyframes fiFadeIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
+
+  .fi-panel-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 2.5rem;
+    background: #141414;
+    border: 1px solid #2a2a2a;
+    border-radius: 8px;
+    padding: 2.2rem 2.4rem;
+  }
+  .fi-domain-label {
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: #c9a96e;
+    margin-bottom: 0.6rem;
+  }
+  .fi-panel-title {
+    font-size: 1.3rem;
+    color: #f0e8d8;
+    margin-bottom: 0.9rem;
+    line-height: 1.3;
+  }
+  .fi-panel-desc {
+    font-size: 0.88rem;
+    color: #908070;
+    line-height: 1.8;
+    margin-bottom: 1.2rem;
+  }
+  .fi-panel-tags { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+  .fi-panel-tags span {
+    font-size: 0.66rem;
+    background: #1e1a14;
+    border: 1px solid #3a3020;
+    color: #a09070;
+    padding: 0.18rem 0.6rem;
+    border-radius: 2px;
+  }
+  .fi-impact-title {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #c9a96e;
+    margin-bottom: 0.8rem;
+  }
+  .fi-impact-list { list-style: none; }
+  .fi-impact-list li {
+    font-size: 0.83rem;
+    color: #706050;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #1e1e1e;
+    line-height: 1.6;
+  }
+  .fi-impact-list li:last-child { border-bottom: none; }
+  .fi-impact-list li::before { content: '→ '; color: #c9a96e; }
+
+  @media (max-width: 760px) {
+    .fi-panel-grid { grid-template-columns: 1fr; }
+  }
+</style>
+
+<section id="fi-section">
+  <div class="section-title">Strategic Value for Organizations</div>
+  <p class="fi-intro">
+    Seven directions in which this research base — Vedic knowledge systems, performing
+    arts science, sound healing, and Sanskrit computational linguistics — can be applied
+    by a company, institution, or cultural body to inform strategic and critical
+    decision-making, build differentiated IP, and open new verticals.
+  </p>
+
+  <div class="fi-tabs" id="fi-tabs">
+    <button class="fi-tab-btn fi-active" data-fi="1">AI &amp; Sanskrit NLP</button>
+    <button class="fi-tab-btn" data-fi="2">Cultural Heritage &amp; EdTech</button>
+    <button class="fi-tab-btn" data-fi="3">Wellness &amp; Sound Therapy</button>
+    <button class="fi-tab-btn" data-fi="4">Media &amp; Documentary</button>
+    <button class="fi-tab-btn" data-fi="5">Publishing &amp; Editorial</button>
+    <button class="fi-tab-btn" data-fi="6">Corporate Training &amp; Culture</button>
+    <button class="fi-tab-btn" data-fi="7">Government &amp; Institutions</button>
+  </div>
+
+  <!-- PANEL 1 -->
+  <div class="fi-panel fi-active" id="fi-panel-1">
+    <div class="fi-panel-grid">
+      <div>
+        <div class="fi-domain-label">Artificial Intelligence · Computational Linguistics</div>
+        <div class="fi-panel-title">AI &amp; Sanskrit NLP — Knowledge Systems Engineering</div>
+        <p class="fi-panel-desc">Pāṇini's Aṣṭādhyāyī is the world's first formal generative grammar — a rule-based system with direct structural parallels to modern parsers and neural architectures. For an AI company, this is not a curiosity; it is an underused dataset and design pattern for building rigorous, linguistically-grounded NLP for Indic languages, where commercial models remain weak.</p>
+        <div class="fi-panel-tags"><span>Sanskrit NLP</span><span>Pāṇini Grammar Engine</span><span>Low-Resource Language AI</span><span>Vedic AI Codex</span></div>
+      </div>
+      <div>
+        <div class="fi-impact-title">Decision-Making Impact</div>
+        <ul class="fi-impact-list">
+          <li>Differentiated IP in the underserved Indic-language AI market</li>
+          <li>Research partnership pathway with linguistics &amp; AI labs</li>
+          <li>Reduces build risk by grounding architecture in a 2,500-year-old, battle-tested formal system</li>
+          <li>Positions the organization as a category leader in "Vedic-informed AI"</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- PANEL 2 -->
+  <div class="fi-panel" id="fi-panel-2">
+    <div class="fi-panel-grid">
+      <div>
+        <div class="fi-domain-label">Education Technology · Digital Humanities</div>
+        <div class="fi-panel-title">Cultural Heritage &amp; EdTech Platforms</div>
+        <p class="fi-panel-desc">26 interconnected research subdomains — from Natya Shastra to Sacred Geometry — already exist as a structured, citable knowledge architecture. For an EdTech or digital humanities organization, this is a ready-made curriculum spine: convertible into courses, certifications, interactive learning modules, and licensed content libraries.</p>
+        <div class="fi-panel-tags"><span>Curriculum Design</span><span>Digital Humanities</span><span>Course Licensing</span><span>Knowledge Architecture</span></div>
+      </div>
+      <div>
+        <div class="fi-impact-title">Decision-Making Impact</div>
+        <ul class="fi-impact-list">
+          <li>Accelerates content roadmap with pre-built, research-backed material</li>
+          <li>Opens B2B licensing revenue (universities, museums, cultural foundations)</li>
+          <li>Strengthens authenticity and academic credibility of the platform</li>
+          <li>Reduces content-development cost and time-to-launch</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- PANEL 3 -->
+  <div class="fi-panel" id="fi-panel-3">
+    <div class="fi-panel-grid">
+      <div>
+        <div class="fi-domain-label">Health-Tech · Sound Healing · Bio-Acoustics</div>
+        <div class="fi-panel-title">Wellness &amp; Clinical Sound Therapy</div>
+        <p class="fi-panel-desc">The Raga Pharmacopoeia and Nāda Brahman Bio-Acoustic Codex map the seven Swaras to anatomical resonance zones with physics-grounded equations. For a wellness, health-tech, or pharmaceutical-adjacent organization, this offers a structured starting framework for clinical validation studies and product development in sound-based therapy.</p>
+        <div class="fi-panel-tags"><span>Raga Pharmacopoeia</span><span>Bio-Acoustics</span><span>Clinical Sound Therapy</span><span>Product R&amp;D</span></div>
+      </div>
+      <div>
+        <div class="fi-impact-title">Decision-Making Impact</div>
+        <ul class="fi-impact-list">
+          <li>Provides a testable hypothesis base for clinical research partnerships</li>
+          <li>Supports new product lines in wellness, meditation, or therapeutic-audio tech</li>
+          <li>Adds traditional-knowledge credibility for regulatory and consumer trust</li>
+          <li>Opens collaboration pathways with neuroscience and music-therapy labs</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- PANEL 4 -->
+  <div class="fi-panel" id="fi-panel-4">
+    <div class="fi-panel-grid">
+      <div>
+        <div class="fi-domain-label">Media Production · Documentary · Content Strategy</div>
+        <div class="fi-panel-title">Media, Documentary &amp; Content Strategy</div>
+        <p class="fi-panel-desc">25+ years translating dense scholarship into accessible video, blog, and editorial formats (Aesthetics of Society channel and blog) demonstrates a repeatable content-production model. For a media or production company, this is a vetted format for documentary series, educational content verticals, and long-form editorial that audiences in the cultural-heritage space are actively seeking.</p>
+        <div class="fi-panel-tags"><span>Documentary Research</span><span>Content Strategy</span><span>Editorial Production</span><span>Scriptwriting Support</span></div>
+      </div>
+      <div>
+        <div class="fi-impact-title">Decision-Making Impact</div>
+        <ul class="fi-impact-list">
+          <li>Reduces research risk and turnaround time for heritage/culture documentaries</li>
+          <li>Provides a proven format for converting scholarship into watchable content</li>
+          <li>Strengthens programming slates in the growing "ancient wisdom meets science" niche</li>
+          <li>Supplies a ready slate of 26+ research-backed episode concepts</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- PANEL 5 -->
+  <div class="fi-panel" id="fi-panel-5">
+    <div class="fi-panel-grid">
+      <div>
+        <div class="fi-domain-label">Publishing · Editorial Services · Translation</div>
+        <div class="fi-panel-title">Publishing &amp; Editorial Partnerships</div>
+        <p class="fi-panel-desc">Two books are currently in active writing phase, alongside ongoing Sanskrit-to-English translation work. For a publishing house or academic press, this represents both a pipeline of original manuscripts and a reliable translation/editorial resource for Sanskrit primary-source projects.</p>
+        <div class="fi-panel-tags"><span>Manuscript Pipeline</span><span>Sanskrit Translation</span><span>Academic Publishing</span><span>Ghost Writing</span></div>
+      </div>
+      <div>
+        <div class="fi-impact-title">Decision-Making Impact</div>
+        <ul class="fi-impact-list">
+          <li>Two manuscripts already in progress reduce acquisition risk</li>
+          <li>Adds verified Sanskrit-translation capability to an editorial roster</li>
+          <li>Supports catalogue expansion into performing-arts and consciousness-studies niches</li>
+          <li>Enables co-authorship or ghost-writing arrangements for institutional clients</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- PANEL 6 -->
+  <div class="fi-panel" id="fi-panel-6">
+    <div class="fi-panel-grid">
+      <div>
+        <div class="fi-domain-label">Organizational Development · Leadership · L&amp;D</div>
+        <div class="fi-panel-title">Corporate Training &amp; Organizational Culture</div>
+        <p class="fi-panel-desc">Rasa theory (emotional intelligence), Kośa mapping (psychological structure), and the 108 Karanas (a finite-state model of disciplined practice) translate naturally into frameworks for leadership development, emotional-intelligence training, and team-culture design — distinct from generic corporate-wellness offerings already on the market.</p>
+        <div class="fi-panel-tags"><span>Rasa-Based EI Training</span><span>Leadership Frameworks</span><span>Culture Design</span><span>Differentiated L&amp;D</span></div>
+      </div>
+      <div>
+        <div class="fi-impact-title">Decision-Making Impact</div>
+        <ul class="fi-impact-list">
+          <li>Differentiates an L&amp;D offering from generic mindfulness/wellness programs</li>
+          <li>Provides a structured, named framework (not just "ancient wisdom" branding)</li>
+          <li>Applicable to leadership, conflict-resolution, and team-cohesion training</li>
+          <li>Exportable as a licensable corporate workshop or certification track</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- PANEL 7 -->
+  <div class="fi-panel" id="fi-panel-7">
+    <div class="fi-panel-grid">
+      <div>
+        <div class="fi-domain-label">Cultural Diplomacy · Government · Heritage Bodies</div>
+        <div class="fi-panel-title">Government &amp; Cultural Institution Partnerships</div>
+        <p class="fi-panel-desc">A 26-domain, citation-backed research portal already functions as informal soft-power infrastructure for Indian classical knowledge systems. For a ministry of culture, tourism board, museum, or heritage NGO, this is directly usable as exhibition content, cultural-diplomacy material, or a foundation for state-backed digital heritage archives.</p>
+        <div class="fi-panel-tags"><span>Cultural Diplomacy</span><span>Heritage Archives</span><span>Museum Content</span><span>Tourism &amp; Soft Power</span></div>
+      </div>
+      <div>
+        <div class="fi-impact-title">Decision-Making Impact</div>
+        <ul class="fi-impact-list">
+          <li>Supplies ready content for cultural exhibitions and digital archive initiatives</li>
+          <li>Supports tourism and soft-power programming around classical arts</li>
+          <li>Provides a credentialed research voice for grant proposals and institutional bids</li>
+          <li>Strengthens applications for heritage-preservation and cultural-grant funding</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  (function () {
+    var btns = document.querySelectorAll('.fi-tab-btn');
+    btns.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var n = btn.getAttribute('data-fi');
+        document.querySelectorAll('.fi-tab-btn').forEach(function (b) { b.classList.remove('fi-active'); });
+        document.querySelectorAll('.fi-panel').forEach(function (p) { p.classList.remove('fi-active'); });
+        btn.classList.add('fi-active');
+        document.getElementById('fi-panel-' + n).classList.add('fi-active');
+      });
+    });
+  })();
+</script>
 </body>
 </html>
