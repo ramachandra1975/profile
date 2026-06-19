@@ -610,46 +610,33 @@
     </div>
   </div>
 </footer>
-  <!-- ════════════════════════════════════════════════════════════════
-     STRATEGIC VALUE FOR ORGANIZATIONS — 7-Tab Interactive Section
-     Paste this entire block right before the closing </body> tag.
-     (Self-contained: includes its own <style> and <script>, scoped
-     with the "fi-" prefix so it won't clash with your existing CSS.)
-     ════════════════════════════════════════════════════════════════ -->
-
 <style>
-  /* Optional: increase the base font size across the WHOLE site.
-     Most of your existing sizes use rem units, so raising the root
-     font-size scales everything proportionally without breaking layout.
-     Add this single line inside your main <style> block in <head>
-     (or just leave it here — it will still apply globally): */
   html { font-size: 18px; }
-
   #fi-section {
-    max-width: 1100px;
+    max-width: 1150px;
     margin: 0 auto;
     padding: 4rem 2rem 5rem;
   }
   #fi-section .section-title { margin-bottom: 1rem; }
   .fi-intro {
-    font-size: 0.92rem;
+    font-size: 0.94rem;
     color: #908070;
-    max-width: 760px;
-    margin-bottom: 2.2rem;
-    line-height: 1.8;
+    max-width: 820px;
+    margin-bottom: 2.4rem;
+    line-height: 1.85;
   }
   .fi-tabs {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 2.2rem;
     border-bottom: 1px solid #2a2a2a;
     padding-bottom: 1.2rem;
   }
   .fi-tab-btn {
-    padding: 0.5rem 1.1rem;
-    font-size: 0.8rem;
-    letter-spacing: 0.04em;
+    padding: 0.5rem 1.05rem;
+    font-size: 0.78rem;
+    letter-spacing: 0.03em;
     border-radius: 3px;
     border: 1px solid #3a3020;
     color: #a09070;
@@ -665,14 +652,11 @@
   .fi-panel.fi-active { display: block; }
   @keyframes fiFadeIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
 
-  .fi-panel-grid {
-    display: grid;
-    grid-template-columns: 1.1fr 1fr;
-    gap: 2.5rem;
+  .fi-panel-wrap {
     background: #141414;
     border: 1px solid #2a2a2a;
     border-radius: 8px;
-    padding: 2.2rem 2.4rem;
+    padding: 2.4rem 2.6rem;
   }
   .fi-domain-label {
     font-size: 0.68rem;
@@ -682,56 +666,122 @@
     margin-bottom: 0.6rem;
   }
   .fi-panel-title {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     color: #f0e8d8;
-    margin-bottom: 0.9rem;
+    margin-bottom: 0.4rem;
     line-height: 1.3;
   }
-  .fi-panel-desc {
-    font-size: 0.88rem;
-    color: #908070;
-    line-height: 1.8;
-    margin-bottom: 1.2rem;
+  .fi-panel-subtitle {
+    font-size: 0.86rem;
+    color: #a09070;
+    font-style: italic;
+    margin-bottom: 1.6rem;
   }
-  .fi-panel-tags { display: flex; flex-wrap: wrap; gap: 0.35rem; }
-  .fi-panel-tags span {
+
+  /* Challenge callout */
+  .fi-challenge-box {
+    background: #1a1410;
+    border-left: 3px solid #8a6045;
+    border-radius: 4px;
+    padding: 1.2rem 1.5rem;
+    margin-bottom: 1.6rem;
+  }
+  .fi-challenge-label {
     font-size: 0.66rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: #c08858;
+    margin-bottom: 0.5rem;
+  }
+  .fi-challenge-text {
+    font-size: 0.87rem;
+    color: #c0b0a0;
+    line-height: 1.75;
+  }
+
+  /* Bridge / core concept */
+  .fi-bridge-label {
+    font-size: 0.66rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: #c9a96e;
+    margin-bottom: 0.5rem;
+  }
+  .fi-panel-desc {
+    font-size: 0.89rem;
+    color: #908070;
+    line-height: 1.85;
+    margin-bottom: 1rem;
+  }
+  .fi-panel-desc + .fi-panel-desc { margin-top: -0.4rem; }
+
+  .fi-two-col {
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    gap: 2.6rem;
+    margin-top: 1.8rem;
+  }
+
+  .fi-panel-tags { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-top: 1.2rem; }
+  .fi-panel-tags span {
+    font-size: 0.65rem;
     background: #1e1a14;
     border: 1px solid #3a3020;
     color: #a09070;
     padding: 0.18rem 0.6rem;
     border-radius: 2px;
   }
+
   .fi-impact-title {
     font-size: 0.7rem;
     text-transform: uppercase;
     letter-spacing: 0.12em;
     color: #c9a96e;
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.9rem;
   }
   .fi-impact-list { list-style: none; }
   .fi-impact-list li {
-    font-size: 0.83rem;
+    font-size: 0.84rem;
     color: #706050;
-    padding: 0.5rem 0;
+    padding: 0.55rem 0;
     border-bottom: 1px solid #1e1e1e;
-    line-height: 1.6;
+    line-height: 1.65;
   }
   .fi-impact-list li:last-child { border-bottom: none; }
   .fi-impact-list li::before { content: '→ '; color: #c9a96e; }
 
+  .fi-deliverables {
+    margin-top: 1.4rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid #2a2a2a;
+  }
+  .fi-deliverables-label {
+    font-size: 0.66rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: #706050;
+    margin-bottom: 0.6rem;
+  }
+  .fi-deliverables-text {
+    font-size: 0.82rem;
+    color: #706050;
+    line-height: 1.7;
+  }
+
   @media (max-width: 760px) {
-    .fi-panel-grid { grid-template-columns: 1fr; }
+    .fi-two-col { grid-template-columns: 1fr; gap: 1.6rem; }
+    .fi-panel-wrap { padding: 1.8rem 1.6rem; }
   }
 </style>
 
 <section id="fi-section">
   <div class="section-title">Strategic Value for Organizations</div>
   <p class="fi-intro">
-    Seven directions in which this research base — Vedic knowledge systems, performing
-    arts science, sound healing, and Sanskrit computational linguistics — can be applied
-    by a company, institution, or cultural body to inform strategic and critical
-    decision-making, build differentiated IP, and open new verticals.
+    Most institutions today are not short on data, technology, or capital — they are short on
+    coherent frameworks for meaning, depth, and differentiation. The ten directions below show
+    where 25+ years of research across Vedic knowledge systems, performing arts science, sound
+    healing, and Sanskrit computational linguistics directly addresses a present-day organizational
+    gap, not as cultural decoration, but as applied, structured, decision-grade knowledge.
   </p>
 
   <div class="fi-tabs" id="fi-tabs">
@@ -742,151 +792,437 @@
     <button class="fi-tab-btn" data-fi="5">Publishing &amp; Editorial</button>
     <button class="fi-tab-btn" data-fi="6">Corporate Training &amp; Culture</button>
     <button class="fi-tab-btn" data-fi="7">Government &amp; Institutions</button>
+    <button class="fi-tab-btn" data-fi="8">Mental Health &amp; Cognitive Science</button>
+    <button class="fi-tab-btn" data-fi="9">Design, Geometry &amp; Architecture</button>
+    <button class="fi-tab-btn" data-fi="10">Brand, CSR &amp; Community</button>
   </div>
 
   <!-- PANEL 1 -->
   <div class="fi-panel fi-active" id="fi-panel-1">
-    <div class="fi-panel-grid">
-      <div>
-        <div class="fi-domain-label">Artificial Intelligence · Computational Linguistics</div>
-        <div class="fi-panel-title">AI &amp; Sanskrit NLP — Knowledge Systems Engineering</div>
-        <p class="fi-panel-desc">Pāṇini's Aṣṭādhyāyī is the world's first formal generative grammar — a rule-based system with direct structural parallels to modern parsers and neural architectures. For an AI company, this is not a curiosity; it is an underused dataset and design pattern for building rigorous, linguistically-grounded NLP for Indic languages, where commercial models remain weak.</p>
-        <div class="fi-panel-tags"><span>Sanskrit NLP</span><span>Pāṇini Grammar Engine</span><span>Low-Resource Language AI</span><span>Vedic AI Codex</span></div>
+    <div class="fi-panel-wrap">
+      <div class="fi-domain-label">Artificial Intelligence · Computational Linguistics</div>
+      <div class="fi-panel-title">AI &amp; Sanskrit NLP — Knowledge Systems Engineering</div>
+      <div class="fi-panel-subtitle">Pāṇini's Aṣṭādhyāyī as a 2,500-year-old generative grammar engine.</div>
+
+      <div class="fi-challenge-box">
+        <div class="fi-challenge-label">The Present-Day Gap</div>
+        <div class="fi-challenge-text">Commercial NLP and LLM ecosystems remain structurally weak for Sanskrit and most Indic languages — datasets are sparse, morphology is under-modeled, and most "Indic AI" efforts bolt translation layers onto English-first architectures rather than building from the language's own grammatical logic. Organizations entering this space repeatedly rebuild the same brittle foundations because no one is starting from the formal source.</div>
       </div>
-      <div>
-        <div class="fi-impact-title">Decision-Making Impact</div>
-        <ul class="fi-impact-list">
-          <li>Differentiated IP in the underserved Indic-language AI market</li>
-          <li>Research partnership pathway with linguistics &amp; AI labs</li>
-          <li>Reduces build risk by grounding architecture in a 2,500-year-old, battle-tested formal system</li>
-          <li>Positions the organization as a category leader in "Vedic-informed AI"</li>
-        </ul>
+
+      <div class="fi-bridge-label">How This Bridges It</div>
+      <p class="fi-panel-desc">Pāṇini's Aṣṭādhyāyī is the world's first fully formal, rule-based generative grammar — nearly 4,000 sutras operating with the precision of a compiler's instruction set, complete with meta-rules for rule-conflict resolution that anticipate modern parser design by two millennia. The Vedic AI Codex maps ten such structural parallels (Pāṇini's rule-ordering to logic gates, Piṅgala's binary meter system to bit encoding, Japa repetition cycles to LSTM-style memory loops) into working equations and interactive proofs — giving an AI team a grammatically-grounded starting architecture instead of a translation-layer workaround.</p>
+
+      <div class="fi-two-col">
+        <div>
+          <div class="fi-impact-title">Decision-Making Impact</div>
+          <ul class="fi-impact-list">
+            <li>Differentiated IP in an underserved, high-barrier-to-entry market segment</li>
+            <li>Research-partnership pathway with linguistics and AI labs working on Indic languages</li>
+            <li>Reduces architecture risk by grounding design in a tested, rule-complete formal system</li>
+            <li>Positions the organization as a category leader in grammatically-rigorous Indic AI, not generic "AI + culture" branding</li>
+          </ul>
+        </div>
+        <div>
+          <div class="fi-impact-title">Where This Applies</div>
+          <ul class="fi-impact-list">
+            <li>LLM providers building regional-language model variants</li>
+            <li>EdTech and translation platforms serving Sanskrit/Indic scholarship</li>
+            <li>Government digital-heritage and language-preservation initiatives</li>
+            <li>Academic NLP labs seeking a non-Western grammatical reference model</li>
+          </ul>
+        </div>
+      </div>
+      <div class="fi-panel-tags"><span>Sanskrit NLP</span><span>Pāṇini Grammar Engine</span><span>Low-Resource Language AI</span><span>Vedic AI Codex — 10 Equations</span></div>
+      <div class="fi-deliverables">
+        <div class="fi-deliverables-label">Available As</div>
+        <div class="fi-deliverables-text">Research consultancy, technical-advisory engagement, co-authored whitepaper, or structured handoff of the Vedic AI Codex framework for in-house model development.</div>
       </div>
     </div>
   </div>
 
   <!-- PANEL 2 -->
   <div class="fi-panel" id="fi-panel-2">
-    <div class="fi-panel-grid">
-      <div>
-        <div class="fi-domain-label">Education Technology · Digital Humanities</div>
-        <div class="fi-panel-title">Cultural Heritage &amp; EdTech Platforms</div>
-        <p class="fi-panel-desc">26 interconnected research subdomains — from Natya Shastra to Sacred Geometry — already exist as a structured, citable knowledge architecture. For an EdTech or digital humanities organization, this is a ready-made curriculum spine: convertible into courses, certifications, interactive learning modules, and licensed content libraries.</p>
-        <div class="fi-panel-tags"><span>Curriculum Design</span><span>Digital Humanities</span><span>Course Licensing</span><span>Knowledge Architecture</span></div>
+    <div class="fi-panel-wrap">
+      <div class="fi-domain-label">Education Technology · Digital Humanities</div>
+      <div class="fi-panel-title">Cultural Heritage &amp; EdTech Platforms</div>
+      <div class="fi-panel-subtitle">A 26-domain research architecture as a ready curriculum spine.</div>
+
+      <div class="fi-challenge-box">
+        <div class="fi-challenge-label">The Present-Day Gap</div>
+        <div class="fi-challenge-text">EdTech and heritage platforms targeting Indian classical knowledge face a recurring bottleneck: authentic, well-researched, citation-backed content is slow and expensive to produce in-house, and most available material online is either shallow devotional content or dense academic prose inaccessible to a general learner. Platforms either under-invest in depth or over-invest in production time, rarely both well.</div>
       </div>
-      <div>
-        <div class="fi-impact-title">Decision-Making Impact</div>
-        <ul class="fi-impact-list">
-          <li>Accelerates content roadmap with pre-built, research-backed material</li>
-          <li>Opens B2B licensing revenue (universities, museums, cultural foundations)</li>
-          <li>Strengthens authenticity and academic credibility of the platform</li>
-          <li>Reduces content-development cost and time-to-launch</li>
-        </ul>
+
+      <div class="fi-bridge-label">How This Bridges It</div>
+      <p class="fi-panel-desc">26 interconnected research subdomains — spanning Natya Shastra, Sacred Geometry, Vedic Mathematics, Consciousness Studies, and more — already exist as a structured, cross-referenced knowledge base with 50+ scholarly sources behind it. This is functionally a pre-built curriculum spine: modular enough to be sequenced into courses, certifications, micro-learning content, or a licensed content library, with the depth of academic work already translated into accessible registers.</p>
+
+      <div class="fi-two-col">
+        <div>
+          <div class="fi-impact-title">Decision-Making Impact</div>
+          <ul class="fi-impact-list">
+            <li>Cuts content-development time from years to months by starting from existing research</li>
+            <li>Opens B2B licensing revenue with universities, museums, and cultural foundations</li>
+            <li>Strengthens academic credibility and reduces accuracy/reputational risk</li>
+            <li>Provides a content roadmap already organized by subject-matter cluster</li>
+          </ul>
+        </div>
+        <div>
+          <div class="fi-impact-title">Where This Applies</div>
+          <ul class="fi-impact-list">
+            <li>Online learning platforms building Indian-studies or arts verticals</li>
+            <li>Museum and heritage-site digital interpretation programs</li>
+            <li>University extension and continuing-education programs</li>
+            <li>Children's and youth cultural-education initiatives</li>
+          </ul>
+        </div>
+      </div>
+      <div class="fi-panel-tags"><span>Curriculum Design</span><span>Digital Humanities</span><span>Course Licensing</span><span>26-Domain Knowledge Base</span></div>
+      <div class="fi-deliverables">
+        <div class="fi-deliverables-label">Available As</div>
+        <div class="fi-deliverables-text">Content licensing, curriculum-design consultancy, course co-development, or subject-matter-expert review for existing platforms.</div>
       </div>
     </div>
   </div>
 
   <!-- PANEL 3 -->
   <div class="fi-panel" id="fi-panel-3">
-    <div class="fi-panel-grid">
-      <div>
-        <div class="fi-domain-label">Health-Tech · Sound Healing · Bio-Acoustics</div>
-        <div class="fi-panel-title">Wellness &amp; Clinical Sound Therapy</div>
-        <p class="fi-panel-desc">The Raga Pharmacopoeia and Nāda Brahman Bio-Acoustic Codex map the seven Swaras to anatomical resonance zones with physics-grounded equations. For a wellness, health-tech, or pharmaceutical-adjacent organization, this offers a structured starting framework for clinical validation studies and product development in sound-based therapy.</p>
-        <div class="fi-panel-tags"><span>Raga Pharmacopoeia</span><span>Bio-Acoustics</span><span>Clinical Sound Therapy</span><span>Product R&amp;D</span></div>
+    <div class="fi-panel-wrap">
+      <div class="fi-domain-label">Health-Tech · Sound Healing · Bio-Acoustics</div>
+      <div class="fi-panel-title">Wellness &amp; Clinical Sound Therapy</div>
+      <div class="fi-panel-subtitle">Mapping the seven Swaras to anatomical resonance zones.</div>
+
+      <div class="fi-challenge-box">
+        <div class="fi-challenge-label">The Present-Day Gap</div>
+        <div class="fi-challenge-text">The wellness and sound-therapy market has grown faster than its evidence base. Most "sound healing" products are built on marketing language rather than a coherent physiological model, which limits credibility with clinicians, regulators, and serious consumers — and leaves real therapeutic potential unexplored because no one has formalized the mechanism.</div>
       </div>
-      <div>
-        <div class="fi-impact-title">Decision-Making Impact</div>
-        <ul class="fi-impact-list">
-          <li>Provides a testable hypothesis base for clinical research partnerships</li>
-          <li>Supports new product lines in wellness, meditation, or therapeutic-audio tech</li>
-          <li>Adds traditional-knowledge credibility for regulatory and consumer trust</li>
-          <li>Opens collaboration pathways with neuroscience and music-therapy labs</li>
-        </ul>
+
+      <div class="fi-bridge-label">How This Bridges It</div>
+      <p class="fi-panel-desc">The Raga Pharmacopoeia and Nāda Brahman Bio-Acoustic Codex map the seven Swaras of Carnatic music to specific anatomical resonance zones, with physics-grounded equations for cellular membrane vibration and neural entrainment. Rather than treating sound healing as folklore, this work treats it as a testable physiological hypothesis — giving a wellness or health-tech organization a structured starting framework instead of having to build a clinical rationale from nothing.</p>
+
+      <div class="fi-two-col">
+        <div>
+          <div class="fi-impact-title">Decision-Making Impact</div>
+          <ul class="fi-impact-list">
+            <li>Provides a testable hypothesis base for clinical-validation research partnerships</li>
+            <li>Supports new product lines in wellness, meditation, or therapeutic-audio tech with real mechanism behind them</li>
+            <li>Adds traditional-knowledge depth that strengthens regulatory and consumer trust</li>
+            <li>Opens collaboration pathways with neuroscience and music-therapy laboratories</li>
+          </ul>
+        </div>
+        <div>
+          <div class="fi-impact-title">Where This Applies</div>
+          <ul class="fi-impact-list">
+            <li>Wellness-tech and meditation-app companies building audio products</li>
+            <li>Music-therapy and integrative-medicine clinics</li>
+            <li>Hospitality and retreat brands developing sound-based offerings</li>
+            <li>Academic medical centers researching non-pharmacological interventions</li>
+          </ul>
+        </div>
+      </div>
+      <div class="fi-panel-tags"><span>Raga Pharmacopoeia</span><span>Bio-Acoustics</span><span>Clinical Sound Therapy</span><span>Product R&amp;D</span></div>
+      <div class="fi-deliverables">
+        <div class="fi-deliverables-label">Available As</div>
+        <div class="fi-deliverables-text">Research-framework licensing, clinical-study collaboration, or product-development advisory for sound-based wellness offerings.</div>
       </div>
     </div>
   </div>
 
   <!-- PANEL 4 -->
   <div class="fi-panel" id="fi-panel-4">
-    <div class="fi-panel-grid">
-      <div>
-        <div class="fi-domain-label">Media Production · Documentary · Content Strategy</div>
-        <div class="fi-panel-title">Media, Documentary &amp; Content Strategy</div>
-        <p class="fi-panel-desc">25+ years translating dense scholarship into accessible video, blog, and editorial formats (Aesthetics of Society channel and blog) demonstrates a repeatable content-production model. For a media or production company, this is a vetted format for documentary series, educational content verticals, and long-form editorial that audiences in the cultural-heritage space are actively seeking.</p>
-        <div class="fi-panel-tags"><span>Documentary Research</span><span>Content Strategy</span><span>Editorial Production</span><span>Scriptwriting Support</span></div>
+    <div class="fi-panel-wrap">
+      <div class="fi-domain-label">Media Production · Documentary · Content Strategy</div>
+      <div class="fi-panel-title">Media, Documentary &amp; Content Strategy</div>
+      <div class="fi-panel-subtitle">25+ years of converting dense scholarship into watchable, readable content.</div>
+
+      <div class="fi-challenge-box">
+        <div class="fi-challenge-label">The Present-Day Gap</div>
+        <div class="fi-challenge-text">Audience appetite for "ancient wisdom meets modern science" content has grown sharply, but most production teams lack in-house subject-matter depth — leading to either superficial, fact-light content that erodes trust, or accurate-but-unwatchable academic-style documentaries that fail to find an audience. Research risk and turnaround time are the two biggest blockers to greenlighting this kind of programming.</div>
       </div>
-      <div>
-        <div class="fi-impact-title">Decision-Making Impact</div>
-        <ul class="fi-impact-list">
-          <li>Reduces research risk and turnaround time for heritage/culture documentaries</li>
-          <li>Provides a proven format for converting scholarship into watchable content</li>
-          <li>Strengthens programming slates in the growing "ancient wisdom meets science" niche</li>
-          <li>Supplies a ready slate of 26+ research-backed episode concepts</li>
-        </ul>
+
+      <div class="fi-bridge-label">How This Bridges It</div>
+      <p class="fi-panel-desc">The Aesthetics of Society channel and blog represent a proven, repeatable model for converting complex Vedic and performing-arts scholarship into accessible video and editorial formats — already organized across four content genres (classical dance, Vedic science, psychology, Sanskrit and sound). For a media company, this isn't a concept to develop from scratch; it's a vetted format with a ready slate of research-backed episode concepts spanning 26 subject domains.</p>
+
+      <div class="fi-two-col">
+        <div>
+          <div class="fi-impact-title">Decision-Making Impact</div>
+          <ul class="fi-impact-list">
+            <li>Reduces research risk and turnaround time for heritage and culture documentaries</li>
+            <li>Provides a proven format for converting scholarship into watchable content</li>
+            <li>Strengthens programming slates in a growing, underserved content niche</li>
+            <li>Supplies a ready slate of 26+ research-backed episode and series concepts</li>
+          </ul>
+        </div>
+        <div>
+          <div class="fi-impact-title">Where This Applies</div>
+          <ul class="fi-impact-list">
+            <li>Streaming platforms and broadcasters building culture/documentary verticals</li>
+            <li>Independent production houses developing heritage series</li>
+            <li>Brand-content and editorial teams in the wellness/culture space</li>
+            <li>Podcast and long-form audio networks</li>
+          </ul>
+        </div>
+      </div>
+      <div class="fi-panel-tags"><span>Documentary Research</span><span>Content Strategy</span><span>Editorial Production</span><span>Scriptwriting Support</span></div>
+      <div class="fi-deliverables">
+        <div class="fi-deliverables-label">Available As</div>
+        <div class="fi-deliverables-text">On-camera or research-credited subject-matter expert, episode/series research lead, or fact-verification consultant.</div>
       </div>
     </div>
   </div>
 
   <!-- PANEL 5 -->
   <div class="fi-panel" id="fi-panel-5">
-    <div class="fi-panel-grid">
-      <div>
-        <div class="fi-domain-label">Publishing · Editorial Services · Translation</div>
-        <div class="fi-panel-title">Publishing &amp; Editorial Partnerships</div>
-        <p class="fi-panel-desc">Two books are currently in active writing phase, alongside ongoing Sanskrit-to-English translation work. For a publishing house or academic press, this represents both a pipeline of original manuscripts and a reliable translation/editorial resource for Sanskrit primary-source projects.</p>
-        <div class="fi-panel-tags"><span>Manuscript Pipeline</span><span>Sanskrit Translation</span><span>Academic Publishing</span><span>Ghost Writing</span></div>
+    <div class="fi-panel-wrap">
+      <div class="fi-domain-label">Publishing · Editorial Services · Translation</div>
+      <div class="fi-panel-title">Publishing &amp; Editorial Partnerships</div>
+      <div class="fi-panel-subtitle">A live manuscript pipeline plus verified Sanskrit-translation capability.</div>
+
+      <div class="fi-challenge-box">
+        <div class="fi-challenge-label">The Present-Day Gap</div>
+        <div class="fi-challenge-text">Publishers in the performing-arts and consciousness-studies categories face a thin pool of authors who can write with both scholarly rigor and reader accessibility — and an even thinner pool of reliable Sanskrit-to-English translators for primary-source work. Acquisition pipelines stall waiting for manuscripts that meet both bars at once.</div>
       </div>
-      <div>
-        <div class="fi-impact-title">Decision-Making Impact</div>
-        <ul class="fi-impact-list">
-          <li>Two manuscripts already in progress reduce acquisition risk</li>
-          <li>Adds verified Sanskrit-translation capability to an editorial roster</li>
-          <li>Supports catalogue expansion into performing-arts and consciousness-studies niches</li>
-          <li>Enables co-authorship or ghost-writing arrangements for institutional clients</li>
-        </ul>
+
+      <div class="fi-bridge-label">How This Bridges It</div>
+      <p class="fi-panel-desc">Two books are currently in active writing phase — scholarly treatments of Indian classical dance as a psychological and somatic healing system — alongside ongoing primary-source Sanskrit translation work. For a publishing house or academic press, this represents both a near-term acquisition opportunity with reduced manuscript risk, and a standing editorial resource for translation and fact-checking on related titles.</p>
+
+      <div class="fi-two-col">
+        <div>
+          <div class="fi-impact-title">Decision-Making Impact</div>
+          <ul class="fi-impact-list">
+            <li>Two manuscripts already in progress reduce acquisition and development risk</li>
+            <li>Adds verified Sanskrit-translation capability to an editorial roster</li>
+            <li>Supports catalogue expansion into performing-arts and consciousness-studies niches</li>
+            <li>Enables co-authorship or ghost-writing arrangements for institutional clients</li>
+          </ul>
+        </div>
+        <div>
+          <div class="fi-impact-title">Where This Applies</div>
+          <ul class="fi-impact-list">
+            <li>Academic and trade publishers in South Asian studies or performing arts</li>
+            <li>Institutional clients commissioning monographs or white papers</li>
+            <li>Journals requiring Sanskrit primary-source translation and review</li>
+            <li>Self-publishing platforms seeking credentialed niche authors</li>
+          </ul>
+        </div>
+      </div>
+      <div class="fi-panel-tags"><span>Manuscript Pipeline</span><span>Sanskrit Translation</span><span>Academic Publishing</span><span>Ghost Writing</span></div>
+      <div class="fi-deliverables">
+        <div class="fi-deliverables-label">Available As</div>
+        <div class="fi-deliverables-text">Manuscript acquisition discussion, translation-services contract, or ghost-writing/co-authorship agreement.</div>
       </div>
     </div>
   </div>
 
   <!-- PANEL 6 -->
   <div class="fi-panel" id="fi-panel-6">
-    <div class="fi-panel-grid">
-      <div>
-        <div class="fi-domain-label">Organizational Development · Leadership · L&amp;D</div>
-        <div class="fi-panel-title">Corporate Training &amp; Organizational Culture</div>
-        <p class="fi-panel-desc">Rasa theory (emotional intelligence), Kośa mapping (psychological structure), and the 108 Karanas (a finite-state model of disciplined practice) translate naturally into frameworks for leadership development, emotional-intelligence training, and team-culture design — distinct from generic corporate-wellness offerings already on the market.</p>
-        <div class="fi-panel-tags"><span>Rasa-Based EI Training</span><span>Leadership Frameworks</span><span>Culture Design</span><span>Differentiated L&amp;D</span></div>
+    <div class="fi-panel-wrap">
+      <div class="fi-domain-label">Organizational Development · Leadership · L&amp;D</div>
+      <div class="fi-panel-title">Corporate Training &amp; Organizational Culture</div>
+      <div class="fi-panel-subtitle">Rasa theory and the 108 Karanas as named, structured leadership frameworks.</div>
+
+      <div class="fi-challenge-box">
+        <div class="fi-challenge-label">The Present-Day Gap</div>
+        <div class="fi-challenge-text">Corporate L&amp;D budgets are saturated with generic "mindfulness" and soft-skills programs that employees increasingly tune out, precisely because they lack a coherent underlying framework. Organizations want differentiated emotional-intelligence and culture-building content but default to the same handful of Western behavioral models because nothing else is presented in a usable, structured form.</div>
       </div>
-      <div>
-        <div class="fi-impact-title">Decision-Making Impact</div>
-        <ul class="fi-impact-list">
-          <li>Differentiates an L&amp;D offering from generic mindfulness/wellness programs</li>
-          <li>Provides a structured, named framework (not just "ancient wisdom" branding)</li>
-          <li>Applicable to leadership, conflict-resolution, and team-cohesion training</li>
-          <li>Exportable as a licensable corporate workshop or certification track</li>
-        </ul>
+
+      <div class="fi-bridge-label">How This Bridges It</div>
+      <p class="fi-panel-desc">Rasa theory offers a nine-category model of emotional experience and audience response, originally engineered for performing arts but directly transferable to communication, leadership presence, and conflict navigation. Kośa mapping provides a five-layer model of human functioning (physical, energetic, mental, intuitive, blissful) usable as a diagnostic for team wellbeing. The 108 Karanas — a finite-state system of disciplined practice — translate into a structured model for skill mastery and habit formation. Together these form a named, citable framework distinct from generic corporate-wellness content.</p>
+
+      <div class="fi-two-col">
+        <div>
+          <div class="fi-impact-title">Decision-Making Impact</div>
+          <ul class="fi-impact-list">
+            <li>Differentiates an L&amp;D offering from generic mindfulness/wellness programs</li>
+            <li>Provides a structured, named framework rather than vague "ancient wisdom" branding</li>
+            <li>Applicable to leadership development, conflict resolution, and team-cohesion training</li>
+            <li>Exportable as a licensable corporate workshop or certification track</li>
+          </ul>
+        </div>
+        <div>
+          <div class="fi-impact-title">Where This Applies</div>
+          <ul class="fi-impact-list">
+            <li>Corporate L&amp;D and HR teams designing leadership programs</li>
+            <li>Executive coaching practices seeking a differentiated framework</li>
+            <li>Organizational psychology consultancies</li>
+            <li>Conference and keynote programming on workplace culture</li>
+          </ul>
+        </div>
+      </div>
+      <div class="fi-panel-tags"><span>Rasa-Based EI Training</span><span>Leadership Frameworks</span><span>Culture Design</span><span>Differentiated L&amp;D</span></div>
+      <div class="fi-deliverables">
+        <div class="fi-deliverables-label">Available As</div>
+        <div class="fi-deliverables-text">Workshop design and delivery, framework licensing for in-house trainers, or keynote/speaking engagement.</div>
       </div>
     </div>
   </div>
 
   <!-- PANEL 7 -->
   <div class="fi-panel" id="fi-panel-7">
-    <div class="fi-panel-grid">
-      <div>
-        <div class="fi-domain-label">Cultural Diplomacy · Government · Heritage Bodies</div>
-        <div class="fi-panel-title">Government &amp; Cultural Institution Partnerships</div>
-        <p class="fi-panel-desc">A 26-domain, citation-backed research portal already functions as informal soft-power infrastructure for Indian classical knowledge systems. For a ministry of culture, tourism board, museum, or heritage NGO, this is directly usable as exhibition content, cultural-diplomacy material, or a foundation for state-backed digital heritage archives.</p>
-        <div class="fi-panel-tags"><span>Cultural Diplomacy</span><span>Heritage Archives</span><span>Museum Content</span><span>Tourism &amp; Soft Power</span></div>
+    <div class="fi-panel-wrap">
+      <div class="fi-domain-label">Cultural Diplomacy · Government · Heritage Bodies</div>
+      <div class="fi-panel-title">Government &amp; Cultural Institution Partnerships</div>
+      <div class="fi-panel-subtitle">A citation-backed research portal as ready soft-power infrastructure.</div>
+
+      <div class="fi-challenge-box">
+        <div class="fi-challenge-label">The Present-Day Gap</div>
+        <div class="fi-challenge-text">Cultural ministries, tourism boards, and heritage NGOs are frequently asked to produce credible, citable content for exhibitions, grant applications, and diplomacy initiatives on short timelines — and frequently fall back on generic, uncredentialed material because commissioning original scholarship is slow and expensive, weakening the institution's standing in funding and partnership negotiations.</div>
       </div>
-      <div>
-        <div class="fi-impact-title">Decision-Making Impact</div>
-        <ul class="fi-impact-list">
-          <li>Supplies ready content for cultural exhibitions and digital archive initiatives</li>
-          <li>Supports tourism and soft-power programming around classical arts</li>
-          <li>Provides a credentialed research voice for grant proposals and institutional bids</li>
-          <li>Strengthens applications for heritage-preservation and cultural-grant funding</li>
-        </ul>
+
+      <div class="fi-bridge-label">How This Bridges It</div>
+      <p class="fi-panel-desc">A 26-domain, citation-backed research portal already functions as informal soft-power infrastructure for Indian classical knowledge systems, with 50+ scholarly sources behind it. This is directly usable as exhibition content, cultural-diplomacy material, grant-application backing, or a foundation for a state-backed digital heritage archive — without the lead time of commissioning research from scratch.</p>
+
+      <div class="fi-two-col">
+        <div>
+          <div class="fi-impact-title">Decision-Making Impact</div>
+          <ul class="fi-impact-list">
+            <li>Supplies ready, credentialed content for cultural exhibitions and digital archives</li>
+            <li>Supports tourism and soft-power programming around classical arts</li>
+            <li>Strengthens grant proposals and institutional bids with a recognized research voice</li>
+            <li>Reduces commissioning timelines for heritage-preservation initiatives</li>
+          </ul>
+        </div>
+        <div>
+          <div class="fi-impact-title">Where This Applies</div>
+          <ul class="fi-impact-list">
+            <li>Ministries of culture and tourism boards</li>
+            <li>Museums and heritage-site interpretation programs</li>
+            <li>Cultural-exchange and diplomacy initiatives</li>
+            <li>Heritage-preservation NGOs and grant-funded archive projects</li>
+          </ul>
+        </div>
+      </div>
+      <div class="fi-panel-tags"><span>Cultural Diplomacy</span><span>Heritage Archives</span><span>Museum Content</span><span>Tourism &amp; Soft Power</span></div>
+      <div class="fi-deliverables">
+        <div class="fi-deliverables-label">Available As</div>
+        <div class="fi-deliverables-text">Research-content licensing, exhibition advisory, grant-proposal collaboration, or commissioned archive-building project.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PANEL 8 — NEW -->
+  <div class="fi-panel" id="fi-panel-8">
+    <div class="fi-panel-wrap">
+      <div class="fi-domain-label">Mental Health · Cognitive Science · Workplace Wellbeing</div>
+      <div class="fi-panel-title">Mental Health &amp; Cognitive Science Frameworks</div>
+      <div class="fi-panel-subtitle">Kośa mapping and Turīya as structured models for attention and self-regulation.</div>
+
+      <div class="fi-challenge-box">
+        <div class="fi-challenge-label">The Present-Day Gap</div>
+        <div class="fi-challenge-text">Burnout, attention fragmentation, and workplace mental-health strain are now board-level concerns, but most organizational responses are reactive (EAPs, occasional wellness days) rather than built on a structural model of human attention and self-regulation. Clinical and neuroscience research on the Default Mode Network increasingly validates contemplative frameworks, but few organizations have a bridge between the science and a deployable internal program.</div>
+      </div>
+
+      <div class="fi-bridge-label">How This Bridges It</div>
+      <p class="fi-panel-desc">Consciousness-studies research here maps the classical Kośa (five-sheath) model of human functioning and the Turīya state directly against contemporary findings on the Default Mode Network and attention-regulation neuroscience — producing a "liberation cartography" that is structurally precise, not vaguely spiritual. This gives an organization a defensible, research-literate basis for designing attention-management and resilience programs, rather than importing an off-the-shelf mindfulness app with no underlying model.</p>
+
+      <div class="fi-two-col">
+        <div>
+          <div class="fi-impact-title">Decision-Making Impact</div>
+          <ul class="fi-impact-list">
+            <li>Moves workplace-wellbeing strategy from reactive to model-driven and preventive</li>
+            <li>Bridges contemplative tradition and neuroscience with citable rigor for HR and clinical stakeholders</li>
+            <li>Supports product design for attention/focus apps grounded in a structural model, not slogans</li>
+            <li>Differentiates employee-wellbeing programming with depth that holds up to scrutiny</li>
+          </ul>
+        </div>
+        <div>
+          <div class="fi-impact-title">Where This Applies</div>
+          <ul class="fi-impact-list">
+            <li>HR and occupational-health teams designing resilience programs</li>
+            <li>Mental-health and meditation-app product teams</li>
+            <li>Cognitive-science research groups studying contemplative states</li>
+            <li>Executive coaching and high-performance consultancies</li>
+          </ul>
+        </div>
+      </div>
+      <div class="fi-panel-tags"><span>Kośa Mapping</span><span>Default Mode Network</span><span>Attention Science</span><span>Workplace Resilience</span></div>
+      <div class="fi-deliverables">
+        <div class="fi-deliverables-label">Available As</div>
+        <div class="fi-deliverables-text">Framework-design consultancy, internal whitepaper, or advisory input for product and HR-program development.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PANEL 9 — NEW -->
+  <div class="fi-panel" id="fi-panel-9">
+    <div class="fi-panel-wrap">
+      <div class="fi-domain-label">Design · Sacred Geometry · Architecture · Spatial Systems</div>
+      <div class="fi-panel-title">Design, Geometry &amp; Architecture Innovation</div>
+      <div class="fi-panel-subtitle">Vedic mathematics and sacred-geometry principles as a design-systems source.</div>
+
+      <div class="fi-challenge-box">
+        <div class="fi-challenge-label">The Present-Day Gap</div>
+        <div class="fi-challenge-text">Design and architecture firms increasingly look to non-Western and traditional systems for differentiated spatial and proportional logic — but most engagement with "sacred geometry" in commercial design remains decorative motif-borrowing rather than structural principle, missing the underlying mathematics that made these systems functional in the first place.</div>
+      </div>
+
+      <div class="fi-bridge-label">How This Bridges It</div>
+      <p class="fi-panel-desc">Research into Vedic mathematics and sacred geometry — including Piṅgala's binary numerical systems and the proportional logic embedded in classical temple and performance-space design — surfaces the structural principles behind these traditions, not just their visual motifs. For a design or architecture practice, this offers an actual generative system (proportion, rhythm, spatial sequencing) that can inform layout, acoustic design, and branding systems with intellectual depth behind the aesthetic.</p>
+
+      <div class="fi-two-col">
+        <div>
+          <div class="fi-impact-title">Decision-Making Impact</div>
+          <ul class="fi-impact-list">
+            <li>Moves "sacred geometry" from decorative trend to a genuine generative design system</li>
+            <li>Differentiates branding and spatial-design work with substantive cultural-mathematical grounding</li>
+            <li>Informs acoustic and performance-space design using classical proportional principles</li>
+            <li>Supports storytelling and provenance narratives for design-led products and spaces</li>
+          </ul>
+        </div>
+        <div>
+          <div class="fi-impact-title">Where This Applies</div>
+          <ul class="fi-impact-list">
+            <li>Architecture firms designing cultural, performance, or wellness spaces</li>
+            <li>Branding and graphic-design studios seeking differentiated visual systems</li>
+            <li>Product designers working with proportion-based aesthetics</li>
+            <li>Urban and landscape planners referencing traditional spatial logic</li>
+          </ul>
+        </div>
+      </div>
+      <div class="fi-panel-tags"><span>Sacred Geometry</span><span>Vedic Mathematics</span><span>Proportional Systems</span><span>Acoustic Design</span></div>
+      <div class="fi-deliverables">
+        <div class="fi-deliverables-label">Available As</div>
+        <div class="fi-deliverables-text">Design-research consultancy, principle documentation for in-house design teams, or collaborative concept development.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PANEL 10 — NEW -->
+  <div class="fi-panel" id="fi-panel-10">
+    <div class="fi-panel-wrap">
+      <div class="fi-domain-label">Brand Strategy · CSR · Community Engagement</div>
+      <div class="fi-panel-title">Brand Storytelling, CSR &amp; Community Engagement</div>
+      <div class="fi-panel-subtitle">Bhakti traditions and testimony archives as authentic community-narrative material.</div>
+
+      <div class="fi-challenge-box">
+        <div class="fi-challenge-label">The Present-Day Gap</div>
+        <div class="fi-challenge-text">Brands and CSR programs operating in or around Indian cultural contexts frequently struggle with authenticity — community-facing campaigns built on surface-level cultural references draw criticism for tokenism, while genuinely substantive cultural engagement is hard to source without a real research relationship to the communities and traditions involved.</div>
+      </div>
+
+      <div class="fi-bridge-label">How This Bridges It</div>
+      <p class="fi-panel-desc">Research into Bhakti and Agamic arts, temple traditions, and a growing testimony archive of practitioner voices and community accounts provides a grounded, non-extractive basis for brand storytelling and CSR programming connected to Indian classical culture. This is first-person-adjacent, citation-backed material — not a marketing team's outside-in interpretation of "tradition" — giving a brand or foundation genuine substance for cultural-engagement narratives.</p>
+
+      <div class="fi-two-col">
+        <div>
+          <div class="fi-impact-title">Decision-Making Impact</div>
+          <ul class="fi-impact-list">
+            <li>Reduces reputational risk in culturally-sensitive brand and CSR campaigns</li>
+            <li>Provides authentic, sourced narrative material instead of surface-level cultural references</li>
+            <li>Supports community-engagement programs with real practitioner testimony behind them</li>
+            <li>Strengthens foundation and CSR grant narratives with credentialed cultural research</li>
+          </ul>
+        </div>
+        <div>
+          <div class="fi-impact-title">Where This Applies</div>
+          <ul class="fi-impact-list">
+            <li>Brand and marketing teams operating in heritage-adjacent categories</li>
+            <li>Corporate foundations and CSR programs supporting arts and culture</li>
+            <li>NGOs documenting and preserving devotional and community traditions</li>
+            <li>Hospitality and lifestyle brands building culturally-rooted storytelling</li>
+          </ul>
+        </div>
+      </div>
+      <div class="fi-panel-tags"><span>Bhakti &amp; Agamic Arts</span><span>Testimony Archive</span><span>CSR Storytelling</span><span>Community Engagement</span></div>
+      <div class="fi-deliverables">
+        <div class="fi-deliverables-label">Available As</div>
+        <div class="fi-deliverables-text">Narrative-research consultancy, CSR-program content development, or community-testimony documentation project.</div>
       </div>
     </div>
   </div>
